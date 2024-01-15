@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -11,9 +11,18 @@ export class ImgComponent implements OnInit {
   @Input() imgPadreInput: string = "valor inicial del input aunque no importa que vaya hay por que sera remplazado por lo que hay en el root";
   @Input() imgLoadingLink: string = "";
   imgDefault: string="https://picsum.photos/200";
+  //salida de datos
+  @Output() loaded = new EventEmitter <string>();
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  //para poner la imagen por defecto
+  imgError(){
+    this.imgLoadingLink = this.imgDefault;
+  }
+  imgLoaded(){
+    console.log("log hijo");
+    this.loaded.emit(this.imgLoadingLink);
+  }
 }

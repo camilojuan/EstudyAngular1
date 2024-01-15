@@ -10,5 +10,8 @@ export class AppComponent {
   ImgParentDinamic ="texto dinamico desde root";
   //ImgRender = "https://www.w3schools.com/howto/img_avatar.png";
   //ingresarla en vacio para poder que se eva la imagen por defecto
-  ImgRender = "";  
+  ImgRender = "";
+  onloaded(imgParameter: string){
+    console.log("log padre", imgParameter);
+  }  
 }

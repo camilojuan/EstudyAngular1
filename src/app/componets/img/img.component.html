@@ -2,13 +2,13 @@
 <h2>{{img}}</h2>
 aqui lo que hacemos es enviar un dato desde el padre que remplaza el valor
 <h2>{{imgPadre}}</h2>
-<p>en esta parte dinamicamente por mediod  einput alteramos el dato de esta caja de etxto, apesar de que la variable imgPadreInput en el imgcomponent tenga un valor este
+<p>en esta parte dinamicamente por medio de input alteramos el dato de esta caja de texto, apesar de que la variable imgPadreInput en el imgcomponent tenga un valor este
     no es el que imprime, sino el que se le asigna en appcomponent(root) por que le asignamos ese valor a la caja de etxto y tambien remplazamos el valor de
     el component img
 </p>
 <h1>{{imgPadreInput}}</h1>
 <p>teniendo una imagen en el componente principal en una variable se la asigno a la variable del imgcomponent y ya la coloco en el tag img</p> 
-<img width="200" [src]="imgLoadingLink" *ngIf="imgLoadingLink; else elseImg">
+<img width="200" (load)="imgLoaded()" (error)="imgError()" [src]="imgLoadingLink" *ngIf="imgLoadingLink; else elseImg">
 <ng-template #elseImg>
     <img [src]="imgDefault"/>
 </ng-template>
