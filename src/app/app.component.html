@@ -1,8 +1,15 @@
-<p>caja de texto para escribir algo que se replicara</p>
-<input type="text" [(ngModel)]="ImgParentDinamic"/>
-<app-img (loaded)="onloaded($event)" imgPadre="Datos enviados desde el padre html" [imgPadreInput]="ImgParentDinamic" [imgLoadingLink]="ImgRender"></app-img>
-<p>caja de texto para poner el link de la  imagen  peude ser la de abajo por que la quite del 
-    app root para que apreciera una por defecto despues ponerle esta y cargarla
-</p>
-<p>puedes utilizar esta -> https://www.w3schools.com/howto/img_avatar.png </p>
-<input type="text" [(ngModel)]="ImgRender"/>
+<div>
+    <p>caja de texto para escribir algo que se replicara</p>
+    <input type="text" [(ngModel)]="ImgParentDinamic"/>
+    <app-img (loaded)="onloaded($event)" imgPadre="Datos enviados desde el padre html" [imgPadreInput]="ImgParentDinamic" [imgLoadingLink]="ImgRender"></app-img>
+    <p>caja de texto para poner el link de la  imagen  peude ser la de abajo por que la quite del 
+        app root para que apreciera una por defecto despues ponerle esta y cargarla
+    </p>
+    <p>puedes utilizar esta -> https://www.w3schools.com/howto/img_avatar.png </p>
+    <input type="text" [(ngModel)]="ImgRender"/>
+</div>
+<div>
+    <br>
+    <h1>Producto</h1>
+    <app-product [Product]="productsHtml" *ngFor="let productsHtml of products"></app-product>
+</div>
