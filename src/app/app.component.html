@@ -1,3 +1,4 @@
+<!--
 <div>
     <p>caja de texto para escribir algo que se replicara</p>
     <input type="text" [(ngModel)]="ImgParentDinamic"/>
@@ -22,3 +23,11 @@
     <h1>Producto</h1>
     <app-product [Product]="productsHtml" *ngFor="let productsHtml of products"></app-product>
 </div>
+<hr>
+<div>
+    <p>puedes utilizar esta para validar la imagen-> https://www.w3schools.com/howto/img_avatar.png </p>
+    <input type="text" [(ngModel)]="imgValidate"/>
+    <br>
+    <app-img-validate [changeImg]="imgValidate"></app-img-validate>
+</div>-->
+<app-products></app-products>

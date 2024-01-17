@@ -13,6 +13,9 @@ export class AppComponent {
   //ImgRender = "https://www.w3schools.com/howto/img_avatar.png";
   //ingresarla en vacio para poder que se eva la imagen por defecto
   ImgRender = "";
+
+  //img validate
+  imgValidate="";
   //ngDestroy and set input min:5
   showImg = true;
   toggleImg(){
