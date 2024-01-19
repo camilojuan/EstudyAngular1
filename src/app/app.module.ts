@@ -8,6 +8,7 @@ import { ImgComponent } from './componets/img/img.component';
 import { ProductComponent } from './componets/product/product.component';
 import { ImgValidateComponent } from './componets/img-validate/img-validate.component';
 import { ProductsComponent } from './componets/products/products.component';
+import { NavComponent } from './componets/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProductsComponent } from './componets/products/products.component';
     ProductComponent,
     ImgValidateComponent,
     ProductsComponent,
+    NavComponent,
     ],
   imports: [
     BrowserModule,
