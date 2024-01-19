@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 //para poder utilizar el tipado de producto en esta clase
-import {Product} from "./models/product.model"
+import {ProductExample} from "./models/productExample"
 
 @Component({
   selector: 'app-root',
@@ -27,7 +27,7 @@ export class AppComponent {
   } 
   
   //----------------------- product
-  products: Product[]=[
+  products: ProductExample[]=[
     {
       id: '1',
       name: 'EL mejor juguete',
@@ -52,6 +52,6 @@ export class AppComponent {
       price: 23,
       image: 'https://picsum.photos/200'
     },
-  ];
+  ]; 
   
 }
